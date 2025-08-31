@@ -5,172 +5,209 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seja uma Revendedora Chiara Semijoias</title>
-    <link rel="stylesheet" href="style_captura.css">
+    <!-- Bootstrap CSS (necessário para o modal) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Seu CSS customizado (deve vir DEPOIS do Bootstrap) -->
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 
 <body>
     <header class="main-header">
-        <div class="container">
+        <div class="container header-container">
             <img src="logo.svg" alt="Logo Chiara Semijoias" class="header-logo">
+            <!-- Botão para abrir o modal de gerar link -->
+            <button type="button" class="link-generator-btn" data-bs-toggle="modal" data-bs-target="#modalCPF">
+                Já sou revendedora
+            </button>
         </div>
     </header>
 
     <main>
+        <!-- SEÇÃO HERO -->
         <section class="hero-section">
             <div class="container hero-grid">
                 <div class="hero-text-content">
-                    <h1 class="hero-title animate-on-load">Transforme Paixão em Lucro</h1>
-                    <p class="hero-subtitle animate-on-load">Revenda semijoias de alta qualidade, <br> design exclusivo e
-                        conquiste sua independência financeira. ✨</p>
-                    <a href="#form-section" class="cta-button animate-on-load">Quero Ser Revendedora</a>
+                    <h1 class="hero-title animate-on-load">Ganhe dinheiro revendendo semijoias, sem investir nada.</h1>
+                    <p class="hero-subtitle animate-on-load">100% gratuito para começar. Flexibilidade total. Revendedoras em todo o Brasil já estão conquistando sua independência financeira.</p>
+                    <a href="#form-section" class="cta-button animate-on-load">Quero ser revendedora agora</a>
                 </div>
                 <div class="hero-image-content animate-on-load">
                     <div class="shape shape-1"></div>
                     <div class="shape shape-2"></div>
-                    <img src="joias.png" alt="Semijoia em destaque" class="hero-image">
+                    <img src="modelo.png" alt="Modelo usando semijoias elegantes" class="hero-image">
                 </div>
             </div>
         </section>
 
+        <!-- SEÇÃO BENEFÍCIOS -->
         <section class="benefits-section">
-            <div class="container">
-                <h2 class="section-title">Por que ser uma Revendedora Chiara?</h2>
+             <div class="container">
+                <h2 class="section-title">Por que se tornar nossa revendedora?</h2>
                 <div class="benefits-grid">
                     <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                        <h3 class="benefit-title">Sem Investimento Inicial</h3>
+                        <p>Comece seu negócio do zero, sem taxas, kits obrigatórios ou qualquer custo para iniciar.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fas fa-percent"></i></div>
+                        <h3 class="benefit-title">Lucro de até 50%</h3>
+                        <p>Oferecemos uma das melhores margens de lucro do mercado para você construir uma renda sólida.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+                        <h3 class="benefit-title">Flexibilidade Total</h3>
+                        <p>Seja sua própria chefe. Trabalhe nos seus horários, de onde estiver, e concilie com sua rotina.</p>
+                    </div>
+                    <div class="benefit-card">
                         <div class="benefit-icon"><i class="fas fa-gem"></i></div>
-                        <h3 class="benefit-title">Alta Qualidade</h3>
-                        <p>Peças com banho premium e garantia de 1 ano, garantindo a satisfação e fidelidade de suas
-                            clientes.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon"><i class="fas fa-dollar-sign"></i></div>
-                        <h3 class="benefit-title">Lucratividade</h3>
-                        <p>Oferecemos uma excelente margem de lucro para você construir uma renda sólida e crescente.
-                        </p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon"><i class="fas fa-star"></i></div>
-                        <h3 class="benefit-title">Design Exclusivo</h3>
-                        <p>Acesso a coleções exclusivas e lançamentos constantes que encantam e estão sempre na moda.
-                        </p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon"><i class="fas fa-headset"></i></div>
-                        <h3 class="benefit-title">Suporte Total</h3>
-                        <p>Receba material de marketing, treinamentos de vendas e todo o suporte da nossa equipe para
-                            você brilhar.</p>
+                        <h3 class="benefit-title">Produtos de Alta Qualidade</h3>
+                        <p>Peças com banho premium e garantia que encantam, gerando clientes fiéis e recompras constantes.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ======================================== -->
-        <!--        NOVA SEÇÃO "COMO FUNCIONA"        -->
-        <!-- ======================================== -->
-        <section class="steps-section">
-            <div class="container">
-                <h2 class="section-title">Comece a Lucrar em 3 Passos Simples</h2>
-                <div class="steps-timeline">
-                    <div class="step-item">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h3>Cadastro</h3>
-                            <p>Preencha o formulário rápido no final da página com seus dados.</p>
-                        </div>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h3>Contato</h3>
-                            <p>Nossa equipe entrará em contato via WhatsApp para aprovar seu cadastro.</p>
-                        </div>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h3>Vendas</h3>
-                            <p>Receba seu kit inicial e comece a encantar clientes e a lucrar imediatamente!</p>
-                        </div>
-                    </div>
+        <!-- SEÇÃO "SOBRE NÓS" -->
+        <section class="about-section">
+            <div class="container about-grid">
+                <div class="about-image-content">
+                    <img src="chiara.png" alt="Foto institucional da Chiara Semijoias">
+                </div>
+                <div class="about-text-content">
+                    <h2 class="section-title left-aligned">Quem Somos</h2>
+                    <p>A Chiara Semijoias nasceu com o propósito de transformar vidas por meio do empreendedorismo. Nossas semijoias são feitas com qualidade, estilo e garantia, conquistando clientes em todo o Brasil e empoderando mulheres a alcançarem seus sonhos.</p>
+                    <img src="logo.svg" alt="Logo Chiara Semijoias" class="about-logo">
                 </div>
             </div>
         </section>
-        <!-- ======================================== -->
-
-        <section class="gallery-section">
-            <div class="container">
-                <h2 class="section-title">Encante-se com Nossas Peças</h2>
-                <div class="gallery-grid">
-                    <div class="gallery-item"><img
-                            src="colar.png"
-                            alt="Joia 1"></div>
-                    <div class="gallery-item"><img
-                            src="https://images.pexels.com/photos/265906/pexels-photo-265906.jpeg?auto=compress&cs=tinysrgb&w=600"
-                            alt="Joia 2"></div>
-                    <div class="gallery-item"><img
-                            src="https://images.pexels.com/photos/2735970/pexels-photo-2735970.jpeg?auto=compress&cs=tinysrgb&w=600"
-                            alt="Joia 3"></div>
-                    <div class="gallery-item"><img
-                            src="brinco.png"
-                            alt="Joia 4"></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="testimonials-section">
-            <div class="container">
-                <h2 class="section-title">O que Nossas Revendedoras Dizem</h2>
+        
+        <!-- SEÇÃO PROVA SOCIAL -->
+        <section class="social-proof-section">
+             <div class="container">
+                <h2 class="section-title">Histórias reais de quem decidiu empreender com a gente</h2>
+                <p class="section-subtitle">Elas começaram sem nada e hoje têm resultados incríveis. Veja suas histórias.</p>
                 <div class="testimonials-grid">
+                    <div class="testimonial-card video-testimonial">
+                        <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Revendedora Sorrindo">
+                        <div class="video-overlay"><i class="fas fa-play"></i></div>
+                        <span class="testimonial-author video-author">- Depoimento da Carla M.</span>
+                    </div>
                     <div class="testimonial-card">
-                        <p class="testimonial-quote">"Comecei a revender Chiara há 6 meses e já conquistei minha
-                            liberdade financeira. As peças são lindas e vendem sozinhas!"</p>
+                        <p class="testimonial-quote">"Consegui quitar minhas dívidas em 3 meses vendendo semijoias."</p>
                         <span class="testimonial-author">- Amanda S., São Paulo/SP</span>
                     </div>
                     <div class="testimonial-card">
-                        <p class="testimonial-quote">"A qualidade é incomparável. Minhas clientes amam e sempre voltam
-                            para comprar mais. O suporte da equipe faz toda a diferença."</p>
+                        <p class="testimonial-quote">"Agora tenho minha própria renda, sem depender de ninguém."</p>
                         <span class="testimonial-author">- Juliana R., Belo Horizonte/MG</span>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ======================================== -->
+        <!-- SEÇÃO FORMULÁRIO (CONTEÚDO INTEGRADO)    -->
+        <!-- ======================================== -->
         <section id="form-section" class="form-section">
             <div class="container">
-                <h2 class="section-title form-title">Faça Parte do Nosso Time!</h2>
-                <p class="form-subtitle">Preencha o formulário abaixo para dar o primeiro passo. Nossa equipe comercial
-                    entrará em contato em breve.</p>
-                <form class="capture-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Nome Completo" required>
+                <h2 class="section-title form-title">Pronta para começar sua jornada?</h2>
+                <p class="form-subtitle">Cadastre-se e receba seu link exclusivo de revendedora. Nossa equipe entrará em contato em breve.</p>
+                
+                <!-- SEU NOVO FORMULÁRIO AQUI -->
+                <form id="formCadastro" class="capture-form" novalidate>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nome_completo" class="form-label">Nome Completo</label>
+                            <input type="text" class="form-control" name="nome_completo" id="nome_completo" required />
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cpf" class="form-label">CPF</label>
+                            <input type="text" class="form-control" name="cpf" id="cpf" maxlength="14" required placeholder="000.000.000-00" />
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cidade_estado" class="form-label">Cidade / Estado</label>
+                            <input type="text" class="form-control" name="cidade_estado" id="cidade_estado" required />
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="whatsapp" class="form-label">WhatsApp</label>
+                            <input type="text" class="form-control" name="whatsapp" id="whatsapp" required />
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="instagram" class="form-label">Instagram</label>
+                            <input type="text" class="form-control" name="instagram" id="instagram" />
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo_vendedor" class="form-label">Tipo de Vendedor</label>
+                            <select class="form-select" name="tipo_vendedor" id="tipo_vendedor">
+                                <option value="Varejo" selected>Varejo</option>
+                                <option value="Atacado">Atacado</option>
+                            </select>
+                            <div class="invalid-feedback"></div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="CPF" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Cidade / Estado" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="WhatsApp com DDD" required>
-                    </div>
-                    <button type="submit" class="cta-button">Enviar Cadastro e Começar a Lucrar</button>
+
+                    <input type="hidden" name="revendedor_id" id="revendedor_id" />
+
+                    <button type="submit" class="cta-button">Quero ser uma revendedora</button>
                 </form>
             </div>
         </section>
     </main>
 
     <footer class="main-footer">
-        <p>© 2025 Chiara Semijoias. Todos os direitos reservados.</p>
+        <p>© 2024 Chiara Semijoias. Todos os direitos reservados.</p>
     </footer>
+    
+    <!-- ======================================== -->
+    <!--     MODAL PARA GERAR LINK (INTEGRADO)    -->
+    <!-- ======================================== -->
+    <div class="modal fade" id="modalCPF" tabindex="-1" aria-labelledby="modalCPFLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form id="formCpf">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalCPFLabel">Gerar Link de Recrutamento</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <label for="cpfModal" class="form-label">Digite seu CPF de revendedora</label>
+                        <input type="text" class="form-control mb-3" id="cpfModal" name="cpf" maxlength="14" required placeholder="000.000.000-00" />
+                        <div id="linkContainer" class="d-none">
+                            <label class="form-label">Seu link exclusivo:</label>
+                            <input type="text" id="linkGerado" class="form-control mb-2" readonly />
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-outline-secondary btn-sm" id="btnCopiar">Copiar</button>
+                                <button type="button" class="btn btn-outline-primary btn-sm" id="btnCompartilhar">Compartilhar</button>
+                                <a href="#" target="_blank" id="btnAbrir" class="btn btn-outline-success btn-sm">Abrir</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Gerar Link</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
+
+    <!-- ======================================== -->
+    <!--         SCRIPTS (INTEGRADOS)             -->
+    <!-- ======================================== -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para o header sticky -->
     <script>
-        // Script para o header sticky
         const header = document.querySelector('.main-header');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -179,6 +216,107 @@
                 header.classList.remove('scrolled');
             }
         });
+    </script>
+    
+    <!-- JS para máscara de CPF -->
+    <script>
+    function cpfMask(value) {
+        return value
+            .replace(/\D/g, '')
+            .replace(/(\d{3})(\d)/, '$1.$2')
+            .replace(/(\d{3})(\d)/, '$1.$2')
+            .replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+    }
+    document.getElementById('cpf').addEventListener('input', (e) => { e.target.value = cpfMask(e.target.value); });
+    document.getElementById('cpfModal').addEventListener('input', (e) => { e.target.value = cpfMask(e.target.value); });
+    </script>
+
+    <!-- Script para preencher revendedor_id vindo da URL -->
+    <script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const params = new URLSearchParams(window.location.search);
+        const revendedorId = params.get('revendedor_id');
+        if (revendedorId) {
+            document.getElementById('revendedor_id').value = revendedorId;
+            console.log("revendedor_id detectado:", revendedorId);
+        }
+    });
+    </script>
+
+    <!-- JS para envio do formulário de cadastro -->
+    <script>
+    document.getElementById('formCadastro').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+        const data = {};
+        formData.forEach((value, key) => { data[key] = value.trim(); });
+        if (data.cpf) { data.cpf = data.cpf.replace(/\D/g, ''); }
+        clearErrors(form);
+
+        try {
+            const response = await fetch('http://127.0.0.1:8000/api/vendedor/recruta', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json', },
+                body: JSON.stringify(data),
+            });
+            const result = await response.json();
+            if (response.ok) {
+                alert(result.message || 'Revendedor cadastrado com sucesso!');
+                form.reset();
+            } else {
+                if (result.errors) { showErrors(form, result.errors); } 
+                else { alert('Erro: ' + (result.message || 'Ocorreu um erro.')); }
+            }
+        } catch (error) {
+            alert('Erro na requisição: ' + error.message);
+        }
+    });
+
+    function clearErrors(form) {
+        form.querySelectorAll('.form-control, .form-select').forEach(input => {
+            input.classList.remove('is-invalid');
+            const feedback = input.parentNode.querySelector('.invalid-feedback');
+            if (feedback) feedback.textContent = '';
+        });
+    }
+
+    function showErrors(form, errors) {
+        for (const [field, messages] of Object.entries(errors)) {
+            const input = form.querySelector(`[name="${field}"]`);
+            if (input) {
+                input.classList.add('is-invalid');
+                const feedback = input.parentNode.querySelector('.invalid-feedback');
+                if (feedback) feedback.textContent = messages.join(', ');
+            }
+        }
+    }
+    </script>
+
+    <!-- JS para gerar link via modal -->
+    <script>
+    document.getElementById('formCpf').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const cpf = document.getElementById('cpfModal').value.replace(/\D/g, '');
+        try {
+            const response = await fetch('http://127.0.0.1:8000/api/vendedor/link?cpf=' + cpf);
+            const data = await response.json();
+            if (response.ok) {
+                const linkGerado = data.data;
+                document.getElementById('linkGerado').value = linkGerado;
+                document.getElementById('linkContainer').classList.remove('d-none');
+                document.getElementById('btnAbrir').href = linkGerado;
+                document.getElementById('btnCopiar').onclick = () => {
+                    navigator.clipboard.writeText(linkGerado).then(() => { alert('Link copiado!'); });
+                };
+                document.getElementById('btnCompartilhar').onclick = () => {
+                    if (navigator.share) {
+                        navigator.share({ title: 'Link de Recrutamento', text: 'Cadastre-se para ser uma revendedora!', url: linkGerado });
+                    } else { alert('Compartilhamento não suportado.'); }
+                };
+            } else { alert('Erro: ' + (data.error || 'Erro ao gerar link.')); }
+        } catch (err) { alert('Erro ao tentar gerar o link.'); }
+    });
     </script>
 </body>
 
