@@ -42,21 +42,19 @@ body {
 }
 
 /* ======================================== */
-/*              CABEÇALHO                   */
+/*        CABEÇALHO (ALTERADO AQUI)         */
 /* ======================================== */
 .main-header {
-  padding: 20px 0;
+  padding: 15px 0; /* Diminuído um pouco para ficar mais elegante */
   position: sticky;
   width: 100%;
   top: 0;
   z-index: 1000;
   transition: all 0.3s ease;
+  background-color: var(--primary-color); /* Fundo com a cor primária */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra permanente para dar profundidade */
 }
-.main-header.scrolled {
-  background-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(10px);
-}
+/* A classe .scrolled não é mais necessária para mudar a cor de fundo */
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -64,21 +62,20 @@ body {
 }
 .header-logo {
   height: 45px;
-  filter: invert(47%) sepia(8%) saturate(1637%) hue-rotate(297deg)
-    brightness(97%) contrast(85%);
+  filter: none; /* Filtro removido para mostrar as cores originais do logo */
 }
 .link-generator-btn {
   background-color: transparent;
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
+  border: 1px solid var(--white-color); /* Borda branca */
+  color: var(--white-color); /* Texto branco */
   padding: 8px 20px;
   border-radius: 50px;
   font-weight: 500;
   transition: all 0.3s ease;
 }
 .link-generator-btn:hover {
-  background-color: var(--primary-color);
-  color: var(--white-color);
+  background-color: var(--white-color);
+  color: var(--primary-color); /* Cor do texto muda no hover */
 }
 
 /* ======================================== */
@@ -380,7 +377,7 @@ section {
 .form-select {
   width: 100%;
   padding: 16px 25px;
-  border-radius: 10px !important; /* !important para sobrescrever Bootstrap */
+  border-radius: 10px !important;
   border: 1px solid var(--border-color);
   font-size: 1rem;
   font-family: var(--font-body);
@@ -565,5 +562,10 @@ section {
   }
   .hero-subtitle {
     font-size: 1rem;
+  }
+  .radio-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 }
